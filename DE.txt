@@ -1,0 +1,6 @@
+proxies:
+- {"name":"🇩🇪 DE_53 |55.17Mb","server":"s2.hass.win","type":"trojan","country":"🇩🇪 DE","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","skip-cert-verify":true,"udp":true}
+- {"name":"🇩🇪 DE_54 |54.05Mb","server":"s4.hazz.win","type":"trojan","country":"🇩🇪 DE","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","skip-cert-verify":true,"udp":true}
+- {"name":"🇩🇪 DE_55 |55.40Mb","server":"s2.hazz.win","type":"trojan","country":"🇩🇪 DE","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","skip-cert-verify":true,"udp":true}
+- {"name":"🇩🇪 DE_56 |54.32Mb","server":"s4.hass.win","type":"trojan","country":"🇩🇪 DE","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","skip-cert-verify":true,"udp":true}
+- {"name":"🇩🇪 DE_57 | 3.04Mb","server":"trojan-ctb-sg01.globalssh.xyz","type":"trojan","country":"🇩🇪 DE","port":443,"password":"123456","skip-cert-verify":true,"udp":true}

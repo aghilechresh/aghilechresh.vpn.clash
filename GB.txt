@@ -1,0 +1,12 @@
+proxies:
+- {"name":"🇬🇧 GB_70 |16.04Mb","server":"212.102.53.78","type":"ss","country":"🇬🇧 GB","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+- {"name":"🇬🇧 GB_71 |12.96Mb","server":"212.102.53.81","type":"ss","country":"🇬🇧 GB","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+- {"name":"🇬🇧 GB_72 |17.59Mb","server":"212.102.53.197","type":"ss","country":"🇬🇧 GB","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+- {"name":"🇬🇧 GB_73 |70.07Mb","server":"78.129.253.9","type":"ss","country":"🇬🇧 GB","port":809,"password":"G!yBwPWH3Vao","cipher":"chacha20-ietf-poly1305"}
+- {"name":"🇬🇧 GB_74 |11.05Mb","server":"212.102.53.194","type":"ss","country":"🇬🇧 GB","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+- {"name":"🇬🇧 GB_75 |63.99Mb","server":"3.9.175.102","type":"trojan","country":"🇬🇧 GB","port":443,"password":"iyinglong","skip-cert-verify":true,"udp":true}
+- {"name":"🇬🇧 GB_76 |55.17Mb","server":"jgwld1.gaox.ml","type":"trojan","country":"🇬🇧 GB","port":443,"password":"02e653c9-7c93-46a9-999d-11834bd0c577","skip-cert-verify":true,"udp":true}
+- {"name":"🇬🇧 GB_77 |64.89Mb","server":"35.176.6.24","type":"trojan","country":"🇬🇧 GB","port":443,"password":"iyinglong","skip-cert-verify":true,"udp":true}
+- {"name":"🇬🇧 GB_79 |65.08Mb","server":"18.133.181.177","type":"trojan","country":"🇬🇧 GB","port":443,"password":"iyinglong","skip-cert-verify":true,"udp":true}
+- {"name":"🇬🇧 GB_80","server":"api.mjj-home.com","type":"trojan","country":"🇬🇧 GB","port":443,"password":"share.mjj-home.com","skip-cert-verify":true,"udp":true}
+- {"name":"🇬🇧 GB_81 |66.05Mb","server":"3.8.216.52","type":"trojan","country":"🇬🇧 GB","port":443,"password":"iyinglong","skip-cert-verify":true,"udp":true}
