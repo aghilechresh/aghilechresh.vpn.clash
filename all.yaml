@@ -36,3 +36,59 @@ proxies:
 - {"name":"🇷🇺 RU_97 |20.19Mb","server":"79.133.109.56","type":"ss","country":"🇷🇺 RU","port":1036,"password":")1N1E6v0SU_rGTpg","cipher":"chacha20-ietf-poly1305"}
 - {"name":"🇷🇺 RU_98 |47.56Mb","server":"mf02.xmss.vip","type":"ss","country":"🇷🇺 RU","port":18888,"password":"5595f1cf-d7c0-4121-a3bf-19e423c1f9a1","cipher":"chacha20-ietf-poly1305"}
 - {"name":"🇷🇺 RU_99","server":"usa23.884899.cf","type":"trojan","country":"🇷🇺 RU","port":443,"password":"3df66137-a428-429c-a858-8b150721b354","skip-cert-verify":true,"udp":true}
+- {name: FRA 🇫🇷 Gravelines, server: 95.85.90.181, port: 803, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+- {name: FRA 🇫🇷 Paris, server: 135.125.248.215, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+- {name: FRA 🇫🇷 Paris 2, server: 141.95.0.26, port: 826, type: ss, cipher: chacha20-ietf-poly1305, password: sF43Xt2gONqcgFX563, udp: true}
+- {name: FRA 🇫🇷 Roubaix, server: 95.85.90.181, port: 803, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+- {name: FRA 🇫🇷 Roubaix 2, server: 95.85.90.181, port: 807, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+- {name: FRA 🇫🇷 Roubaix 3, server: 95.85.90.181, port: 808, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+- {name: FRA 🇫🇷 Roubaix 4, server: 95.85.90.181, port: 810, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+- {name: FRA 🇫🇷 Roubaix 5, server: 151.80.27.161, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+- {name: GER 🇩🇪 Düsseldorf, server: 146.0.36.44, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+- {name: GER 🇩🇪 Düsseldorf 2, server: 161.97.131.160, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: GER 🇩🇪 Düsseldorf 3, server: 178.18.255.190, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: GER 🇩🇪 Düsseldorf 4, server: 194.163.134.104, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: dZpagSuA9Vxe, udp: true}
+- {name: GER 🇩🇪 Hesse, server: 135.125.236.229, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+- {name: GER 🇩🇪 Hesse 2, server: 135.125.244.103, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: GER 🇩🇪 Hesse 3, server: 135.125.248.215, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+- {name: GER 🇩🇪 Hesse 4, server: 141.95.0.23, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+- {name: GER 🇩🇪 Nuremberg, server: 95.111.255.56, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Wh9NryUjBiKu, udp: true}
+- {name: GER 🇩🇪 Nuremberg 2, server: 213.136.80.36, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: "ufo Germany 🇩🇪 Berlin", server: 196.244.72.5, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+- {name: "ufo Germany 🇩🇪 Düsseldorf 2", server: 85.114.138.92, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+- {name: "ufo Germany 🇩🇪 Düsseldorf", server: 93.186.201.124, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+- {name: "ufo Germany 🇩🇪 FrankfurtamMain 3", server: 18.185.63.41, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+- {name: "ufo Germany 🇩🇪 FrankfurtamMain 2", server: 185.104.184.78, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+- {name: "ufo Germany 🇩🇪 FrankfurtamMain", server: 3.126.91.132, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+- {name: "ufo Germany 🇩🇪 LimburganderLahn 2", server: 135.125.248.209, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+- {name: "ufo Germany 🇩🇪 LimburganderLahn", server: 135.125.253.250, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+- {name: "Aloha Germany 🇩🇪 Düsseldorf", server: 178.18.255.190, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+- {name: "Aloha Germany 🇩🇪 Limburg an der Lahn", server: 135.125.244.103, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+- {name: "Aloha Germany 🇩🇪 Nuremberg", server: 213.136.80.36, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+- {name: LUX 🇱🇺 Luxembourg, server: 172.255.248.35, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: MDA 🇲🇩 Chisinau, server: 192.121.87.89, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: MEX 🇲🇽 Mexico City, server: 169.57.35.97, port: 8389, type: ss, cipher: chacha20-ietf-poly1305, password: 3Q5yYEGGMu8jU2p25aWL, udp: true}
+- {name: MKD 🇲🇰 Skopje, server: 46.183.185.15, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: MLT 🇲🇹 Qormi, server: 185.89.238.36, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: MLT 🇲🇹 Safi, server: 185.89.238.36, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: PRT 🇵🇹 Lisbon, server: 185.90.57.152, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: qSnstpCypymLvPeyLRqf, udp: true}
+- {name: ROM 🇷🇴 Bucharest, server: 86.105.25.162, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: gKDDFZyBmBH5Ru46xBAK, udp: true}
+- {name: ROM 🇷🇴 Bucharest 2, server: 194.68.44.206, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: ROM 🇷🇴 Lasi, server: 185.225.19.64, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+- {name: RUS 🇷🇺 Moscow, server: 83.217.9.76, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: RUS 🇷🇺 Moscow 2, server: 185.4.65.6, port: 21247, type: ss, cipher: aes-256-cfb, password: vDS9G2p, udp: true}
+- {name: SWIT 🇨🇭 Zurich, server: 212.237.210.158, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: TUR 🇹🇷 Bahçelievler, server: 185.17.113.234, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+- {name: TUR 🇹🇷 Istanbul, server: 141.98.119.156, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+- {name: TUR 🇹🇷 Istanbul 2, server: 141.98.119.180, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+- {name: TUR 🇹🇷 Istanbul 3, server: 185.17.113.234, port: 806, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+- {name: TUR 🇹🇷 Istanbul 4, server: 185.219.134.52, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+- {name: TUR 🇹🇷 Istanbul 5, server: 185.219.134.182, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+- {name: "Speedy Quark Turkey 🇹🇷 Istanbul 1", server: 141.98.119.180, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+- {name: "Speedy Quark Turkey 🇹🇷 Istanbul 2", server: 185.219.134.52, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+- {name: "Speedy Quark Turkey 🇹🇷 Istanbul 3", server: 185.219.133.176, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+- {name: "Speedy Quark Turkey 🇹🇷 Istanbul 4", server: 185.219.134.182, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+- {name: "Speedy Quark Turkey 🇹🇷 Istanbul 5", server: 141.98.119.156, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+- {name: "Speedy Quark Turkey 🇹🇷 Istanbul 6", server: 185.219.134.161, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+- {name: UKR 🇺🇦 Kharkiv, server: 195.211.41.10, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+- {name: UKR 🇺🇦 Kyiv, server: 37.19.218.197, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: Mx6DztQqZb7j34FdWjER, udp: true}
