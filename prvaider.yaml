@@ -136,4 +136,4 @@ rules:
   - GEOIP,IR,DIRECT
   - GEOIP,CN,🔰 All
   - IP-CIDR,10.0.0.0/8,🔰 All
-  - MATCH,,🔰 All,Remote-dns
+  - MATCH,🔰 All
