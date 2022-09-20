@@ -4,3 +4,17 @@ proxies:
 - {"name":"🇩🇪 DE_55 |55.40Mb","server":"s2.hazz.win","type":"trojan","country":"🇩🇪 DE","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","skip-cert-verify":true,"udp":true}
 - {"name":"🇩🇪 DE_56 |54.32Mb","server":"s4.hass.win","type":"trojan","country":"🇩🇪 DE","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","skip-cert-verify":true,"udp":true}
 - {"name":"🇩🇪 DE_57 | 3.04Mb","server":"trojan-ctb-sg01.globalssh.xyz","type":"trojan","country":"🇩🇪 DE","port":443,"password":"123456","skip-cert-verify":true,"udp":true}
+- {"name":"🇩🇪_1","server":"172.105.244.165","port":3306,"type":"ss","cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+- {"name":"🇩🇪_2","server":"139.162.132.116","port":8009,"type":"ss","cipher":"aes-256-gcm","password":"XKFKl2rULjIp74"}
+- {"name":"🇩🇪_3","server":"172.105.244.165","port":8080,"type":"ss","cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+- {"name":"🇩🇪_4","server":"172.105.244.165","port":443,"type":"ss","cipher":"aes-256-gcm","password":"pKEW8JPByTVTLtM"}
+- {"name":"🇩🇪_5","server":"172.105.244.165","port":5003,"type":"ss","cipher":"aes-256-gcm","password":"g5MeD6Ft3CWlJId"}
+- {"name":"🇩🇪_6","server":"172.105.244.165","port":7306,"type":"ss","cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+- {"name":"🇩🇪_7","server":"172.105.244.165","port":5004,"type":"ss","cipher":"aes-256-gcm","password":"g5MeD6Ft3CWlJId"}
+- {"name":"🇩🇪_8","server":"172.105.244.165","port":2376,"type":"ss","cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+- {"name":"🇩🇪_9","server":"172.105.244.165","port":8090,"type":"ss","cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
+- {"name":"🇩🇪_10","server":"172.105.244.165","port":2375,"type":"ss","cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+- {"name":"🇩🇪_11","server":"172.105.244.165","port":3389,"type":"ss","cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+- {"name":"🇩🇪_12","server":"172.105.244.165","port":7307,"type":"ss","cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+- {"name":"🇩🇪_13","server":"217.182.199.168","port":5500,"type":"ss","cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+- {"name":"🇩🇪_14","server":"217.182.199.168","port":8888,"type":"ss","cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
