@@ -1,11 +1,37 @@
-port: 7890
-socks-port: 7891
-mixed-port: 7890
-redir-port: 7892
-allow-lan: false
+mixed-port: 1111
 mode: rule
+allow-lan: false
 log-level: info
+dns:
+  enable: true
+  ipv6: false
+  use-hosts: true
+  nameserver:
+  - 1.1.1.1
+  - dhcp://system
+  fallback: []
+  fallback-filter:
+    geoip: true
+    geoip-code: ""
+    ipcidr: []
+    domain: [google.com]
+  listen: ""
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.0/8
+  fake-ip-filter: true
+  - +.stun.*.*
+  - lens.l.google.com
+  - '*.mcdn.bilivideo.cn'
+  - '*.msftncsi.com'
+  - '*.igamecj.com'
+  - '*.gclouds.com'
+  default-nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+  nameserver-policy: {}
 external-controller: 127.0.0.1:9090
+experimental:
+  ignore-resolve-fail: true
 
 proxies:
 
