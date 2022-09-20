@@ -130,4 +130,10 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
 
 rules:
-  - MATCH,🔰 All
+  - DOMAIN-KEYWORD,google,🔰 All
+  - DOMAIN-KEYWORD,gcloud,🔰 All
+  - DOMAIN-KEYWORD,irancell,DIRECT
+  - GEOIP,IR,DIRECT
+  - GEOIP,CN,🔰 All
+  - IP-CIDR,10.0.0.0/8,🔰 All
+  - MATCH,,🔰 All,Remote-dns
