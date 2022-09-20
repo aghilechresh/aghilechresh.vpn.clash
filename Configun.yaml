@@ -1,0 +1,346 @@
+mixed-port: 7890
+allow-lan: false
+mode: Global
+log-level: silent
+external-controller: 10.11.11.10:9090
+
+dns:
+    enable: true # set true to enable dns (default is false)
+    ipv6: true  # default is false
+    listen: 0.0.0.0:1053
+    enhanced-mode: redir-host
+    nameserver:
+      - 127.0.0.1:8053
+      
+      proxy-sources:
+  - type: url
+    url: "https://raw.githubusercontent.com/Kr328/clash-config-preprocessor/master/example/proxies.yml"
+  - type: plain
+    data:
+      name: "ss1"
+      type: ss
+      server: server
+      port: 443
+      cipher: AEAD_CHACHA20_POLY1305
+      password: "password"
+      
+proxies:
+  - {name: FRA 🇫🇷 Gravelines, server: 95.85.90.181, port: 803, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: FRA 🇫🇷 Paris, server: 135.125.248.215, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: FRA 🇫🇷 Paris 2, server: 141.95.0.26, port: 826, type: ss, cipher: chacha20-ietf-poly1305, password: sF43Xt2gONqcgFX563, udp: true}
+  - {name: FRA 🇫🇷 Roubaix, server: 95.85.90.181, port: 803, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: FRA 🇫🇷 Roubaix 2, server: 95.85.90.181, port: 807, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: FRA 🇫🇷 Roubaix 3, server: 95.85.90.181, port: 808, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: FRA 🇫🇷 Roubaix 4, server: 95.85.90.181, port: 810, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: FRA 🇫🇷 Roubaix 5, server: 151.80.27.161, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: GER 🇩🇪 Düsseldorf, server: 146.0.36.44, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: GER 🇩🇪 Düsseldorf 2, server: 161.97.131.160, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: GER 🇩🇪 Düsseldorf 3, server: 178.18.255.190, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: GER 🇩🇪 Düsseldorf 4, server: 194.163.134.104, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: dZpagSuA9Vxe, udp: true}
+  - {name: GER 🇩🇪 Hesse, server: 135.125.236.229, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: GER 🇩🇪 Hesse 2, server: 135.125.244.103, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: GER 🇩🇪 Hesse 3, server: 135.125.248.215, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: GER 🇩🇪 Hesse 4, server: 141.95.0.23, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: GER 🇩🇪 Nuremberg, server: 95.111.255.56, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Wh9NryUjBiKu, udp: true}
+  - {name: GER 🇩🇪 Nuremberg 2, server: 213.136.80.36, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "ufo Germany 🇩🇪 Berlin", server: 196.244.72.5, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: "ufo Germany 🇩🇪 Düsseldorf 2", server: 85.114.138.92, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: "ufo Germany 🇩🇪 Düsseldorf", server: 93.186.201.124, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: "ufo Germany 🇩🇪 FrankfurtamMain 3", server: 18.185.63.41, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: "ufo Germany 🇩🇪 FrankfurtamMain 2", server: 185.104.184.78, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: "ufo Germany 🇩🇪 FrankfurtamMain", server: 3.126.91.132, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: "ufo Germany 🇩🇪 LimburganderLahn 2", server: 135.125.248.209, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: "ufo Germany 🇩🇪 LimburganderLahn", server: 135.125.253.250, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: "Aloha Germany 🇩🇪 Düsseldorf", server: 178.18.255.190, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: "Aloha Germany 🇩🇪 Limburg an der Lahn", server: 135.125.244.103, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: "Aloha Germany 🇩🇪 Nuremberg", server: 213.136.80.36, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: LUX 🇱🇺 Luxembourg, server: 172.255.248.35, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: MDA 🇲🇩 Chisinau, server: 192.121.87.89, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: MEX 🇲🇽 Mexico City, server: 169.57.35.97, port: 8389, type: ss, cipher: chacha20-ietf-poly1305, password: 3Q5yYEGGMu8jU2p25aWL, udp: true}
+  - {name: MKD 🇲🇰 Skopje, server: 46.183.185.15, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: MLT 🇲🇹 Qormi, server: 185.89.238.36, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: MLT 🇲🇹 Safi, server: 185.89.238.36, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: PRT 🇵🇹 Lisbon, server: 185.90.57.152, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: qSnstpCypymLvPeyLRqf, udp: true}
+  - {name: ROM 🇷🇴 Bucharest, server: 86.105.25.162, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: gKDDFZyBmBH5Ru46xBAK, udp: true}
+  - {name: ROM 🇷🇴 Bucharest 2, server: 194.68.44.206, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: ROM 🇷🇴 Lasi, server: 185.225.19.64, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: RUS 🇷🇺 Moscow, server: 83.217.9.76, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: RUS 🇷🇺 Moscow 2, server: 185.4.65.6, port: 21247, type: ss, cipher: aes-256-cfb, password: vDS9G2p, udp: true}
+  - {name: SWIT 🇨🇭 Zurich, server: 212.237.210.158, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: TUR 🇹🇷 Bahçelievler, server: 185.17.113.234, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: TUR 🇹🇷 Istanbul, server: 141.98.119.156, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: TUR 🇹🇷 Istanbul 2, server: 141.98.119.180, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: TUR 🇹🇷 Istanbul 3, server: 185.17.113.234, port: 806, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: TUR 🇹🇷 Istanbul 4, server: 185.219.134.52, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: TUR 🇹🇷 Istanbul 5, server: 185.219.134.182, port: 50003, type: ss, cipher: aes-256-cfb, password: !<str> 8460400130, udp: true}
+  - {name: "Speedy Quark Turkey 🇹🇷 Istanbul 1", server: 141.98.119.180, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+  - {name: "Speedy Quark Turkey 🇹🇷 Istanbul 2", server: 185.219.134.52, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+  - {name: "Speedy Quark Turkey 🇹🇷 Istanbul 3", server: 185.219.133.176, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+  - {name: "Speedy Quark Turkey 🇹🇷 Istanbul 4", server: 185.219.134.182, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+  - {name: "Speedy Quark Turkey 🇹🇷 Istanbul 5", server: 141.98.119.156, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+  - {name: "Speedy Quark Turkey 🇹🇷 Istanbul 6", server: 185.219.134.161, port: 50003, type: ss, cipher: aes-256-cfb, password: "8460400130"}
+  - {name: UKR 🇺🇦 Kharkiv, server: 195.211.41.10, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: UKR 🇺🇦 Kyiv, server: 37.19.218.197, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: Mx6DztQqZb7j34FdWjER, udp: true}
+
+proxy-providers:
+  au:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=AU"
+    path: sspool.herokuapp.com/provider-au.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  cn:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=CN,HK,TW"
+    path: sspool.herokuapp.com/provider-cn.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  us:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=US"
+    path: sspool.herokuapp.com/provider-us.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  ca:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=CA"
+    path: sspool.herokuapp.com/provider-ca.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  jp:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=JP"
+    path: sspool.herokuapp.com/provider-jp.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  sg:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=SG"
+    path: sspool.herokuapp.com/provider-sg.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  ru:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=RU"
+    path: sspool.herokuapp.com/provider-ru.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  ch:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=CH"
+    path: sspool.herokuapp.com/provider-ch.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  de:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=DE"
+    path: sspool.herokuapp.com/provider-de.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  fr:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=FR"
+    path: sspool.herokuapp.com/provider-fr.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  gb:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=GB"
+    path: sspool.herokuapp.com/provider-gb.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  nl:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=NL"
+    path: sspool.herokuapp.com/provider-nl.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  others:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU"
+    path: sspool.herokuapp.com/provider-others.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  all:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies"
+    path: sspool.herokuapp.com/provider.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+      
+proxy-groups:
+  - name: 🔰 All Proxies
+    type: select
+    proxies:
+      - 🔥 Auto(Best ping)
+      - FRA 🇫🇷 Gravelines
+      - FRA 🇫🇷 Paris
+      - FRA 🇫🇷 Paris 2
+      - FRA 🇫🇷 Roubaix
+      - FRA 🇫🇷 Roubaix 2
+      - FRA 🇫🇷 Roubaix 3
+      - FRA 🇫🇷 Roubaix 4
+      - FRA 🇫🇷 Roubaix 5
+      - GER 🇩🇪 Düsseldorf
+      - GER 🇩🇪 Düsseldorf 2
+      - GER 🇩🇪 Düsseldorf 3
+      - GER 🇩🇪 Düsseldorf 4
+      - GER 🇩🇪 Hesse
+      - GER 🇩🇪 Hesse 2
+      - GER 🇩🇪 Hesse 3
+      - GER 🇩🇪 Hesse 4
+      - GER 🇩🇪 Nuremberg
+      - "ufo Germany 🇩🇪 Berlin"
+      - "ufo Germany 🇩🇪 Düsseldorf 2"
+      - "ufo Germany 🇩🇪 Düsseldorf"
+      - "ufo Germany 🇩🇪 FrankfurtamMain 3"
+      - "ufo Germany 🇩🇪 FrankfurtamMain 2"
+      - "ufo Germany 🇩🇪 FrankfurtamMain"
+      - "ufo Germany 🇩🇪 LimburganderLahn 2"
+      - "Aloha Germany 🇩🇪 Düsseldorf"
+      - "Aloha Germany 🇩🇪 Limburg an der Lahn"
+      - "Aloha Germany 🇩🇪 Nuremberg"
+      - "ufo Germany 🇩🇪 LimburganderLahn"
+      - GER 🇩🇪 Nuremberg 2
+      - LUX 🇱🇺 Luxembourg
+      - MDA 🇲🇩 Chisinau
+      - MEX 🇲🇽 Mexico City
+      - MKD 🇲🇰 Skopje
+      - MLT 🇲🇹 Qormi
+      - MLT 🇲🇹 Safi
+      - PRT 🇵🇹 Lisbon
+      - ROM 🇷🇴 Bucharest
+      - ROM 🇷🇴 Bucharest 2
+      - ROM 🇷🇴 Lasi
+      - RUS 🇷🇺 Moscow
+      - RUS 🇷🇺 Moscow 2
+      - SWIT 🇨🇭 Zurich
+      - TUR 🇹🇷 Bahçelievler
+      - TUR 🇹🇷 Istanbul
+      - TUR 🇹🇷 Istanbul 2
+      - TUR 🇹🇷 Istanbul 3
+      - TUR 🇹🇷 Istanbul 4
+      - TUR 🇹🇷 Istanbul 5
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 1"
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 2"
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 3"
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 4"
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 5"
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 6"
+      - UKR 🇺🇦 Kharkiv
+      - UKR 🇺🇦 Kyiv
+
+  - name: 🔥 Auto(Best ping)
+    type: url-test
+    url: http://connectivitycheck.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - FRA 🇫🇷 Gravelines
+      - FRA 🇫🇷 Paris
+      - FRA 🇫🇷 Paris 2
+      - FRA 🇫🇷 Roubaix
+      - FRA 🇫🇷 Roubaix 2
+      - FRA 🇫🇷 Roubaix 3
+      - FRA 🇫🇷 Roubaix 4
+      - FRA 🇫🇷 Roubaix 5
+      - GER 🇩🇪 Düsseldorf
+      - GER 🇩🇪 Düsseldorf 2
+      - GER 🇩🇪 Düsseldorf 3
+      - GER 🇩🇪 Düsseldorf 4
+      - GER 🇩🇪 Hesse
+      - GER 🇩🇪 Hesse 2
+      - GER 🇩🇪 Hesse 3
+      - GER 🇩🇪 Hesse 4
+      - GER 🇩🇪 Nuremberg
+      - GER 🇩🇪 Nuremberg 2
+      - "ufo Germany 🇩🇪 Berlin"
+      - "ufo Germany 🇩🇪 Düsseldorf 2"
+      - "ufo Germany 🇩🇪 Düsseldorf"
+      - "ufo Germany 🇩🇪 FrankfurtamMain 3"
+      - "ufo Germany 🇩🇪 FrankfurtamMain 2"
+      - "ufo Germany 🇩🇪 FrankfurtamMain"
+      - "ufo Germany 🇩🇪 LimburganderLahn 2"
+      - "ufo Germany 🇩🇪 LimburganderLahn"
+      - "Aloha Germany 🇩🇪 Düsseldorf"
+      - "Aloha Germany 🇩🇪 Limburg an der Lahn"
+      - "Aloha Germany 🇩🇪 Nuremberg"
+      - LUX 🇱🇺 Luxembourg
+      - MDA 🇲🇩 Chisinau
+      - MEX 🇲🇽 Mexico City
+      - MKD 🇲🇰 Skopje
+      - MLT 🇲🇹 Qormi
+      - MLT 🇲🇹 Safi
+      - PRT 🇵🇹 Lisbon
+      - ROM 🇷🇴 Bucharest
+      - ROM 🇷🇴 Bucharest 2
+      - ROM 🇷🇴 Lasi
+      - RUS 🇷🇺 Moscow
+      - RUS 🇷🇺 Moscow 2
+      - SWIT 🇨🇭 Zurich
+      - TUR 🇹🇷 Bahçelievler
+      - TUR 🇹🇷 Istanbul
+      - TUR 🇹🇷 Istanbul 2
+      - TUR 🇹🇷 Istanbul 3
+      - TUR 🇹🇷 Istanbul 4
+      - TUR 🇹🇷 Istanbul 5
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 1"
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 2"
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 3"
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 4"
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 5"
+      - "Speedy Quark Turkey 🇹🇷 Istanbul 6"
+      - UKR 🇺🇦 Kharkiv
+      - UKR 🇺🇦 Kyiv
+
+  - name: ⛔Direct
+    type: select
+    proxies:
+      - DIRECT
+      
+      rule-sets:
+  - name: lhie # 名称
+    type: url  # 类新 目前仅支持 url
+    url: 'https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Rule.yml'
+    target-map:             # 用于替换 单条规则 的 目标代理组 不需要请把该行一起删除，勿留空列表
+      - 'AdBlock,REJECT'
+      - 'Media,PROXY'
+      - 'GlobalTV,PROXY'
+      - 'AsianTV,PROXY'
+      - 'Domestic,PROXY'
+      - 'Proxy,PROXY'
+    rule-skip:              # 跳过部分匹配 规则  不需要请把该行一起删除，勿留空列表
+      - 'MATCH'
+    target-skip:            # 跳过部分目标代理组 不需要请把该行一起删除，勿留空列表
+      - 'Final'
+      - 'Others'
+
+rules:
+  - MATCH ,🔰 All Proxies,🔥 Auto(Best ping)
