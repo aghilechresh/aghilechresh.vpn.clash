@@ -1,0 +1,133 @@
+port: 7890
+socks-port: 7891
+mixed-port: 7890
+redir-port: 7892
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+proxies:
+
+proxy-groups:
+  - name: 🔰 All
+    type: select
+    proxies:
+      - prox🔥all
+      - PROXY🌎
+      - PRX🌎all
+      - flback🌐al
+      - prox🔰all
+  - name: PROXY🌎
+    type: select
+    proxies:
+      - DE 🇩🇪 🔥uto
+      - FR 🇫🇷 🔥uto
+      - GB 🇬🇧 🔥uto
+      - NL🇳🇱🔥uto
+      - prx🔥others
+  - name: PRX🌎all
+    type: select
+    use:
+      - all
+  - name: DE 🇩🇪 🔥uto
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - de
+  - name: FR 🇫🇷 🔥uto
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - fr
+  - name: GB 🇬🇧 🔥uto
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - gb
+  - name: NL🇳🇱🔥uto
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - nl
+  - name: prx🔥others
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - others
+  - name: prox🔥all
+    type: url-test
+    use:
+      - all
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+  - name: prox🔰all
+    type: load-balance
+    use:
+      - all
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+  - name: flback🌐al
+    type: fallback
+    use:
+      - all
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+proxy-providers:
+  de:
+    type: http
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/DE.txt"
+    path: sspool.herokuapp.com/provider-de.yaml
+    health-check:
+      enable: true
+      interval: 200
+      url: http://www.gstatic.com/generate_204
+  fr:
+    type: http
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/FR.txt"
+    path: sspool.herokuapp.com/provider-fr.yaml
+    health-check:
+      enable: true
+      interval: 200
+      url: http://www.gstatic.com/generate_204
+  gb:
+    type: http
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/GB.txt"
+    path: sspool.herokuapp.com/provider-gb.yaml
+    health-check:
+      enable: true
+      interval: 200
+      url: http://www.gstatic.com/generate_204
+  nl:
+    type: http
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/NL.txt"
+    path: sspool.herokuapp.com/provider-nl.yaml
+    health-check:
+      enable: true
+      interval: 200
+      url: http://www.gstatic.com/generate_204
+  others:
+    type: http
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/others.txt"
+    path: sspool.herokuapp.com/provider-others.yaml
+    health-check:
+      enable: true
+      interval: 200
+      url: http://www.gstatic.com/generate_204
+  all:
+    type: http
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/all.yaml"
+    path: sspool.herokuapp.com/provider.yaml
+    health-check:
+      enable: true
+      interval: 200
+      url: http://www.gstatic.com/generate_204
+
+rules:
+  - MATCH,🔰 All
