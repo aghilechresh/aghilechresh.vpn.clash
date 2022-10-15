@@ -1,0 +1,47 @@
+port: 7890
+socks-port: 7891
+mixed-port: 7890
+redir-port: 7892
+allow-lan: false
+mode: global
+log-level: info
+external-controller: 127.0.0.1:9090
+
+proxies:
+
+proxy-groups:
+  - name: 🔥 others
+    type: select
+    proxies:
+      - 🔥 others
+      
+  - name: 🔥 others
+    type: select
+    proxies:
+      - others
+      
+  - name: others
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 130
+    use:
+      - others
+
+proxy-providers:
+  others:
+    type: http
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/others.txt"
+    path: sspool.herokuapp.com/provider-others.yaml
+    health-check:
+      enable: true
+      interval: 200
+      url: http://www.gstatic.com/generate_204
+
+rules:
+  - DOMAIN-KEYWORD,google,🔥 others
+  - DOMAIN-KEYWORD,gcloud,🔥 others
+  - DOMAIN-KEYWORD,irancell,DIRECT
+  - GEOIP,IR,DIRECT
+  - GEOIP,CN,🔥 others
+  - IP-CIDR,10.0.0.0/8,🔥 others
+  - MATCH,🔥 others
