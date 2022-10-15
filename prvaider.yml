@@ -13,9 +13,9 @@ proxy-groups:
   - name: 🔥 others
     type: select
     proxies:
-      - 🔥 others
+      -  others
       
-  - name: 🔥 others
+  - name:  others
     type: select
     proxies:
       - others
