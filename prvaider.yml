@@ -1,17 +1,33 @@
-port: 7890
-socks-port: 7891
 mixed-port: 7890
-redir-port: 7892
-allow-lan: true
+allow-lan: false
 mode: Rule
-log-level: info
-external-controller: 127.0.0.1:9090
+log-level: silent
+external-controller: 10.11.11.10:9090
 
+dns:
+    enable: true # set true to enable dns (default is false)
+    ipv6: true  # default is false
+    listen: 0.0.0.0:1053
+    enhanced-mode: redir-host
+    nameserver:
+      - 127.0.0.1:8053
+      
+      proxy-sources:
+  - type: url
+    url: "https://raw.githubusercontent.com/Kr328/clash-config-preprocessor/master/example/proxies.yml"
+  - type: plain
+    data:
+      name: "ss1"
+      type: ss
+      server: server
+      port: 443
+      cipher: AEAD_CHACHA20_POLY1305
+      password: "password"
 proxies:
 
 proxy-groups:
   - name: 🔥 others
-    type: url-test
+    type: select
     proxies:
       - 🌍 Proxi
 
@@ -32,6 +48,22 @@ proxy-providers:
       interval: 200
       url: http://www.gstatic.com/generate_204
 
+      rule-sets:
+  - name: lhie # 名称
+    type: url  # 类新 目前仅支持 url
+    url: 'https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Rule.yml'
+    target-map:             # 用于替换 单条规则 的 目标代理组 不需要请把该行一起删除，勿留空列表
+      - 'AdBlock,REJECT'
+      - 'Media,PROXY'
+      - 'GlobalTV,PROXY'
+      - 'AsianTV,PROXY'
+      - 'Domestic,PROXY'
+      - 'Proxy,PROXY'
+    rule-skip:              # 跳过部分匹配 规则  不需要请把该行一起删除，勿留空列表
+      - 'MATCH'
+    target-skip:            # 跳过部分目标代理组 不需要请把该行一起删除，勿留空列表
+      - 'Final'
+      - 'Others'
 rules:
   - DOMAIN-KEYWORD,google,🔥 others
   - DOMAIN-KEYWORD,gcloud,🔥 others
