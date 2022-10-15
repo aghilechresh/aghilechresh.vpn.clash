@@ -5,13 +5,13 @@ log-level: silent
 external-controller: 10.11.11.10:9090
 
 dns:
-    enable: true # set true to enable dns (default is false)
-    ipv6: true  # default is false
-    listen: 0.0.0.0:1053
-    enhanced-mode: redir-host
+  enable: true # set true to enable dns (default is false)
+  ipv6: true  # default is false
+  listen: 0.0.0.0:1053
+  enhanced-mode: redir-host
     nameserver:
-      - 127.0.0.1:8053
-      
+    - 127.0.0.1:8053
+
 proxies:
 
 proxy-groups:
@@ -37,22 +37,6 @@ proxy-providers:
       interval: 200
       url: http://www.gstatic.com/generate_204
 
-      rule-sets:
-  - name: lhie # 名称
-    type: url  # 类新 目前仅支持 url
-    url: 'https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Rule.yml'
-    target-map:             # 用于替换 单条规则 的 目标代理组 不需要请把该行一起删除，勿留空列表
-      - 'AdBlock,REJECT'
-      - 'Media,PROXY'
-      - 'GlobalTV,PROXY'
-      - 'AsianTV,PROXY'
-      - 'Domestic,PROXY'
-      - 'Proxy,PROXY'
-    rule-skip:              # 跳过部分匹配 规则  不需要请把该行一起删除，勿留空列表
-      - 'MATCH'
-    target-skip:            # 跳过部分目标代理组 不需要请把该行一起删除，勿留空列表
-      - 'Final'
-      - 'Others'
 rules:
   - DOMAIN-KEYWORD,google,🔥 others
   - DOMAIN-KEYWORD,gcloud,🔥 others
