@@ -1,0 +1,126 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+ipv6: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: redir-host
+  listen: :9090
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+  default-nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+proxies:
+
+proxy-groups:
+  - name: FASTSSH
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150
+    proxies:
+      - ALL
+      
+  - name: ALL
+    type: url-test
+    use:
+      - AzadNet
+      - vpnproxy66
+      - config1
+      - AzadNetCH
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150
+    
+  - name: AzadNet
+    type: url-test
+    use:
+      - AzadNet
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150
+    
+  - name: vpnproxy66
+    type: url-test
+    use:
+      - vpnproxy66
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150
+    
+  - name: config1
+    type: url-test
+    use:
+      - config1
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150
+    
+  - name: AzadNetCH
+    type: url-test
+    use:
+      - AzadNetCH
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150    
+
+proxy-providers:
+  AzadNet:
+    type: http
+    url: "https://api.dler.io/sub?target=clash&url=https://9527521.xyz/config/5cWf6HzYRaymt1i7&insert=false&config=https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/customized/ark.ini"
+    path: sspool.herokuapp.com/provider.yaml
+    health-check:
+      enable: true
+      interval: 150
+      url: http://www.gstatic.com/generate_204
+      
+  vpnproxy66:
+    type: http
+    url: "https://api.dler.io/sub?target=clash&url=https://9527521.xyz/config/F1WGaS9uoxjT7s2X&insert=false&config=https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/customized/ark.ini"
+    path: sspool.herokuapp.com/provider.yaml
+    health-check:
+      enable: true
+      interval: 150
+      url: http://www.gstatic.com/generate_204
+      
+  config1:
+    type: http
+    url: "https://9527521.xyz/config/Ez1BmYFA3IJi4wKU"
+    path: sspool.herokuapp.com/provider.yaml
+    health-check:
+      enable: true
+      interval: 150
+      url: http://www.gstatic.com/generate_204
+      
+  AzadNetCH:
+    type: http
+    url: "https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet.yml"
+    path: sspool.herokuapp.com/provider.yaml
+    health-check:
+      enable: true
+      interval: 150
+      url: http://www.gstatic.com/generate_204            
+
+rules:
+  - DOMAIN-KEYWORD,google,FASTSSH
+  - DOMAIN-KEYWORD,facebook,FASTSSH
+  - DOMAIN-KEYWORD,video,FASTSSH
+  - DOMAIN-KEYWORD,gcloud,FASTSSH
+  - DOMAIN-KEYWORD,gstatic,FASTSSH
+  - DOMAIN-KEYWORD,igamecj,FASTSSH
+  - DOMAIN-KEYWORD,tencent,FASTSSH
+  - DOMAIN-KEYWORD,fbcdn,FASTSSH
+  - DOMAIN-KEYWORD,ytimg,FASTSSH
+  - DOMAIN-KEYWORD,youtube,FASTSSH
+  - DOMAIN-KEYWORD,youtu.be,FASTSSH
+  - IP-CIDR,31.13.92.0/24,FASTSSH
+  - IP-CIDR,142.250.0.0/15,FASTSSH
+  - IP-CIDR,172.16.0.0/12,FASTSSH
+  - IP-CIDR,10.0.0.0/8,FASTSSH
+  - IP-CIDR,192.168.0.0/16,FASTSSH
+  - IP-CIDR,203.0.113.0/24,FASTSSH
+  - IP-CIDR,51.0.0.0/8,FASTSSH
+  - IP-CIDR,100.0.0.0/8,FASTSSH
+  - IP-CIDR,150.0.0.0/8,FASTSSH
+  - IP-CIDR,198.0.0.0/8,FASTSSH
+  - MATCH,FASTSSH
