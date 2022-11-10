@@ -20,11 +20,15 @@ proxies:
 
 proxy-groups:
   - name: FASTSSH
-    type: url-test
+    type: select
     url: 'http://www.gstatic.com/generate_204'
     interval: 150
     proxies:
       - ALL
+      - AzadNet
+      - vpnproxy66
+      - config1
+      - AzadNetCH
       
   - name: ALL
     type: url-test
@@ -94,7 +98,7 @@ proxy-providers:
       
   AzadNetCH:
     type: http
-    url: "https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet.yml"
+    url: "https://api.dler.io/sub?target=clash&url=https://9527521.xyz/config/wxGguF2PsHraKN5S&insert=false&config=https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/customized/ark.ini"
     path: sspool.herokuapp.com/provider.yaml
     health-check:
       enable: true
