@@ -114,9 +114,9 @@ dns:
       - +.googleapis.com
       - +.gvt1.com
 proxies:
-  - {name: v2cross.com, server: cm.cf.cname.club, port: 2052, type: vmess, uuid: 6e902fde-dcb1-4d5a-9079-8c086d867954, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: us.cf.cname.club}}, udp: true}
-  - {name: v2cross.com 2, server: 16v2.hyproxy.xyz, port: 443, type: vmess, uuid: b596935c-bc36-43b1-b2f6-8a61c480b38a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 16v2.hyproxy.xyz, network: ws, ws-opts: {path: /hyproxy, headers: {Host: 16v2.hyproxy.xyz}}, udp: true}
-  - {name: v2cross.com 3, server: 43.200.231.89, port: 8081, type: vmess, uuid: dfa91368-7a32-4abe-ffbc-753b1847d899, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: v2cross.com, server: cm.cf.cname.club, port: 2052, type: vmess, uuid: 6e902fde-dcb1-4d5a-9079-8c086d867954, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: us.cf.cname.club}}, udp: false}
+  - {name: v2cross.com 2, server: 16v2.hyproxy.xyz, port: 443, type: vmess, uuid: b596935c-bc36-43b1-b2f6-8a61c480b38a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 16v2.hyproxy.xyz, network: ws, ws-opts: {path: /hyproxy, headers: {Host: 16v2.hyproxy.xyz}}, udp: false}
+  - {name: v2cross.com 3, server: 43.200.231.89, port: 8081, type: vmess, uuid: dfa91368-7a32-4abe-ffbc-753b1847d899, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: false}
 proxy-groups:
   - name: ♻️ AUTO
     type: url-test
