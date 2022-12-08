@@ -143,4 +143,4 @@ proxy-providers:
 
 rules:
   - GEOIP,IR,DIRECT
-  - MATCH,,🔥 grop,encrypt-method
+  - MATCH,🔥 grop
