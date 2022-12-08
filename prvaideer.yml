@@ -8,7 +8,7 @@ external-controller: :9090
 dns:
   enable: true
   ipv6: true
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
   listen: :9090
   nameserver:
     - 9.9.9.9
@@ -39,8 +39,8 @@ proxy-providers:
       url: 'http://www.google.com'
 
 rules:
-  - DOMAIN-KEYWORD,google,🔥 grop
-  - DOMAIN-KEYWORD,gcloud,🔥 grop
+  - DOMAIN-SUFFIX,stun.l.google.com,DIRECT
+  - DOMAIN-SUFFIX,mtalk.google.com,DIRECT
   - DOMAIN-KEYWORD,irancell,DIRECT
   - GEOIP,IR,DIRECT
   - GEOIP,CN,🔥 grop
