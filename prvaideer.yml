@@ -8,8 +8,8 @@ external-controller: 127.0.0.1:9090
 dns:
   enable: true
   ipv6: true
-  enhanced-mode: fake-ip
-  listen: :9090
+  enhanced-mode: redir-host
+  listen: 127.0.0.1:9090
   nameserver:
     - 9.9.9.9
     - 8.8.8.8
