@@ -1,0 +1,53 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+ipv6: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: redir-host
+  listen: :9090
+  nameserver:
+    - 9.9.9.9
+    - 8.8.8.8
+    - 1.0.0.1
+  default-nameserver:
+    - 8.8.8.8
+    - 9.9.9.9
+    - 1.0.0.1
+proxies:
+
+proxy-groups:
+  - name: 🔥 grop
+    type: select
+    proxies:
+      - 🌍 Proxi
+
+  - name: 🌍 Proxi
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - others
+
+proxy-providers:
+  others:
+    type: http
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/my_clash_base.yml.txt"
+    path: sspool.herokuapp.com/provider-others.yaml
+    health-check:
+      enable: true
+      interval: 200
+      url: http://www.gstatic.com/generate_204
+
+rules:
+  - DOMAIN-KEYWORD,google,🔥 grop
+  - DOMAIN-KEYWORD,gcloud,🔥 grop
+  - DOMAIN-KEYWORD,irancell,DIRECT
+  - GEOIP,IR,DIRECT
+  - GEOIP,CN,🔥 grop
+  - IP-CIDR,10.0.0.0/8,🔥 grop
+  - MATCH,🔥 grop
