@@ -125,7 +125,7 @@ proxies:
 
 proxy-groups:
   - name: 🔥 grop
-    type: url-test
+    type: select
     url: 'http://www.google.com'
     interval: 200
     use:
