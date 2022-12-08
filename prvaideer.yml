@@ -142,10 +142,5 @@ proxy-providers:
       url: 'http://www.google.com'
 
 rules:
-  - DOMAIN-SUFFIX,stun.l.google.com,DIRECT
-  - DOMAIN-SUFFIX,mtalk.google.com,DIRECT
-  - DOMAIN-KEYWORD,irancell,DIRECT
   - GEOIP,IR,DIRECT
-  - GEOIP,CN,🔥 grop
-  - IP-CIDR,10.0.0.0/8,🔥 grop
-  - MATCH,🔥 grop
+  - MATCH,🔥 grop,encrypt-method
