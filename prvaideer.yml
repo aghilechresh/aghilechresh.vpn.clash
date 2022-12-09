@@ -79,7 +79,7 @@ proxy-providers:
       interval: 200
       url: 'http://www.google.com'
       
-rules-providers:
+rule-providers:
 # name: # Provider 名称
 #   type: http # http 或 file
 #   behavior: classical # 或 ipcidr、domain
@@ -95,16 +95,14 @@ rules-providers:
     interval: 8700
 
 rules:
-  # Unbreak
-  - DOMAIN-Rules,Unbreak,DIRECT
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
-  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,🔥 grop
   - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,127.0.0.0/8,🔥 grop
   - IP-CIDR,100.64.0.0/10,DIRECT
   - IP-CIDR,224.0.0.0/4,DIRECT
-  - IP-CIDR,fe80::/10,DIRECT
+  - IP-CIDR,fe80::/10,🔥 grop
 
   - DOMAIN-KEYWORD,GitHub,DIRECT
 
