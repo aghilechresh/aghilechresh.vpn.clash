@@ -97,15 +97,15 @@ rule-providers:
 
   Unbreak:
     type: http
-    behavior: domain
+    behavior: payload
     path: RuleSet/Unbreak.yaml
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
     interval: 200
 
-rules:
+payload:
   # Unbreak
   - RULE-SET,Unbreak,DIRECT
-
+rules:
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
