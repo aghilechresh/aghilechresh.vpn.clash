@@ -91,7 +91,7 @@ RULE-SET-providers:
     type: http
     behavior: payload
     path: RuleSet/Unbreak.yaml
-    url: "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml"
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/Google%2C%20DIRECT.yaml"
     interval: 200
 
 rules:
