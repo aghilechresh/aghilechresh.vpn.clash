@@ -21,10 +21,6 @@ dns:
   fake-ip-range: 198.18.0.1/16
   
   nameserver:
-    - https://EU2.DNS.LAVATE.CH/dns-query
-    - https://DNS.HeN.ee/dns-query
-    - https://NoTMIKE.dev/dns.php
-    - tls://dns.google:853
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
     - https://dns.adguard.com/dns-query
@@ -32,10 +28,6 @@ dns:
     - https://dns.quad9.net/dns-query
     - https://DANDELIONSPROUT.Asuscomm.com:2501/dns-query
   fallback:
-    - https://EU2.DNS.LAVATE.CH/dns-query
-    - https://DNS.HeN.ee/dns-query
-    - https://NoTMIKE.dev/dns.php
-    - tls://dns.google:853
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
     - https://dns.adguard.com/dns-query
@@ -46,11 +38,11 @@ dns:
   fallback-filter:
     geoip: true
     ipcidr:
-        - 240.0.0.0/4
+        - 190.0.0.0/4
     # domain:
-    #   - '+.google.com'
-    #   - '+.facebook.com'
-    #   - '+.youtube.com'
+        - '+.google.com'
+        - '+.facebook.com'
+        - '+.youtube.com'
     
   fake-ip-filter:
     - '*.lan'
@@ -71,7 +63,7 @@ proxies:
 
 proxy-groups:
   - name: 🔥 grop
-    type: url-test
+    type: select
     url: 'http://www.google.com'
     interval: 200
     use:
@@ -87,7 +79,7 @@ proxy-providers:
       interval: 200
       url: 'http://www.google.com'
       
-rule-providers:
+RULE-SET-providers:
 # name: # Provider 名称
 #   type: http # http 或 file
 #   behavior: classical # 或 ipcidr、domain
@@ -99,13 +91,12 @@ rule-providers:
     type: http
     behavior: payload
     path: RuleSet/Unbreak.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+    url: "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml"
     interval: 200
 
-RULE-SET:
+rules:
   # Unbreak
   - RULE-SET,Unbreak,DIRECT
-rules:
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
