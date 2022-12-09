@@ -130,7 +130,7 @@ script:
 
 rules:
   #- SCRIPT,quic,DIRECT
-  - RULE-SET,Unbreak,DIRECT,no-resolve
+  #- RULE-SET,Unbreak,DIRECT,no-resolve
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,🔥 grop
