@@ -86,7 +86,6 @@ rule-providers:
     path: RuleSet/Unbreak.yaml
     url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/Google%2C%20DIRECT.yaml"
     interval: 8700
-
 rules:
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
