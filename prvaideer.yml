@@ -72,7 +72,7 @@ proxies:
 proxy-groups:
   - name: 🔥 grop
     type: url-test
-    url: 'http://www.google.com'
+    url: "http://www.google.com"
     interval: 200
     use:
       - others
@@ -99,7 +99,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/Unbreak.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+    url: "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml"
     interval: 86400
 
 rules:
