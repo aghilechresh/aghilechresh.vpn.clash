@@ -129,7 +129,7 @@ script:
     quic: network == 'udp' and dst_port == 443
 
 rules:
-  - SCRIPT,quic,DIRECT
+  #- SCRIPT,quic,DIRECT
   - RULE-SET,Unbreak,DIRECT,no-resolve
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
