@@ -16,58 +16,57 @@ hosts:
 
 dns:
   enable: true                   # set true to enable dns (default is false)
-  
   ipv6: false                    # default is false
-  
   listen: 0.0.0.0:53
-  
 # nameserver-policy:             # lookup domain through assigned nameserver
-
   # 'www.baidu.com': '114.114.114.114'
-  
   # '+.internal.crop.com': '10.0.0.1'
-  
   default-nameserver:            # resolve dns nameserver host, should fill pure IP
                                  # aka Bootstrap DNS
-    - 114.114.114.114
-      
-    - 8.8.8.8
-      
-  enhanced-mode: redir-host      # or fake-ip
-  
-  fake-ip-range: 198.18.0.1/16   # if you don't know what it is, don't change it
-  
-  use-hosts: true                # lookup hosts and return IP record
-  
-  fake-ip-filter:                # fake ip white domain list, aka Always Real IP
-  
-    - '*.lan'
-    
-    - localhost.ptlogin2.qq.com
-    
-  nameserver:
-    - 114.114.114.114
-    
-    - tls://dns.rubyfish.cn:853  # dns over tls
-    
-    - https://1.1.1.1/dns-query  # dns over https
-    
-    - dhcp://en0 # dns from dhcp
-    
-    - '8.8.8.8#en0' # specific interface for nameserver
-    
-  fallback:                      # concurrent request with nameserver, 
-                                 # fallback used when GEOIP country isn't CN
+    - 9.9.9.9
     - tcp://1.1.1.1
-    
+    - 1.0.0.1
+    - 149.112.112.10
+    - 93.190.24.119
+    - tls://dns.rubyfish.cn:853  # dns over tls
+    - https://1.0.0.1/dns-query  # dns over https
+    - dhcp://en0 # dns from dhcp
+    - '8.8.8.8#en0' # specific interface for nameserver
+
+  enhanced-mode: redir-host      # or fake-ip
+  fake-ip-range: 198.18.0.1/16   # if you don't know what it is, don't change it
+  use-hosts: true                # lookup hosts and return IP record
+  fake-ip-filter:                # fake ip white domain list, aka Always Real IP
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+  nameserver:
+    - tcp://1.1.1.1
+    - 9.9.9.9
+    - 1.0.0.1
+    - 149.112.112.10
+    - 93.190.24.119
+    - tls://dns.rubyfish.cn:853  # dns over tls
+    - https://1.0.0.1/dns-query  # dns over https
+    - dhcp://en0 # dns from dhcp
+    - '8.8.8.8#en0' # specific interface for nameserver
+  fallback:                      # concurrent request with nameserver, 
+                         # fallback used when GEOIP country isn't CN
+    - tcp://1.1.1.1
+    - 9.9.9.9
+    - 1.0.0.1
+    - 149.112.112.10
+    - 93.190.24.119
+    - tls://dns.rubyfish.cn:853  # dns over tls
+    - https://1.0.0.1/dns-query  # dns over https
+    - dhcp://en0 # dns from dhcp
+    - '8.8.8.8#en0' # specific interface for nameserver
+
   fallback-filter:
-  
     geoip: true                  # default
-    
-    geoip-code: CN
+    geoip-code: IR
     
     ipcidr:                      # ips in these subnets will be considered polluted
-      - 240.0.0.0/4
+      - 10.0.0.0/8
    #domain:
     # - '+.google.com'
     # - '+.facebook.com'
@@ -108,7 +107,30 @@ rules-providers:
     url: https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/Google%2C%20DIRECT.yaml
     interval: 8700
 
+profile:
+    tracing: true
+
+interface-name: en0
+
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-redir: true
+  auto-route: true
+
+ebpf:
+  redirect-to-tun:
+    - eth0
+
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
+
 rules:
+  - SCRIPT,quic,DIRECT
+  - RULE-SET,Unbreak,DIRECT,no-resolve
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,🔥 grop
@@ -117,6 +139,9 @@ rules:
   - IP-CIDR,100.64.0.0/10,DIRECT
   - IP-CIDR,224.0.0.0/4,DIRECT
   - IP-CIDR,fe80::/10,🔥 grop
+
+  - DST-PORT,80,DIRECT
+  - SRC-PORT,7777,DIRECT
 
   - DOMAIN-KEYWORD,GitHub,DIRECT
 
