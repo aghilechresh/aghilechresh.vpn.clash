@@ -1,131 +1,77 @@
 port: 7890
 socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-allow-lan: false
+allow-lan: true
 mode: Rule
 log-level: info
-ipv6: false
-external-controller: 127.0.0.1:9090
-cfw-latency-url: 'http://cp.cloudflare.com/generate_204'
+external-controller: :9090
+
+hosts:
+  # '*.clash.dev': 127.0.0.1
+  # '.dev': 127.0.0.1
+  # 'alpha.clash.dev': '::1'
+  'mtalk.google.com': 108.177.125.188
+  'dl.google.com': 180.163.151.161
+  'dl.l.google.com': 180.163.151.161
+
 dns:
   enable: true
-  listen: 127.0.0.1:53
+  listen: 0.0.0.0:53
   ipv6: false
   enhanced-mode: fake-ip
-  fake-ip-range: 198.10.0.1/16
-  fake-ip-filter:
-    - "*.lan"
-    - stun.*.*.*
-    - stun.*.*
-    - time.windows.com
-    - time.nist.gov
-    - time.apple.com
-    - time.asia.apple.com
-    - "*.ntp.org.cn"
-    - "*.openwrt.pool.ntp.org"
-    - time1.cloud.tencent.com
-    - time.ustc.edu.cn
-    - pool.ntp.org
-    - ntp.ubuntu.com
-    - ntp.aliyun.com
-    - ntp1.aliyun.com
-    - ntp2.aliyun.com
-    - ntp3.aliyun.com
-    - ntp4.aliyun.com
-    - ntp5.aliyun.com
-    - ntp6.aliyun.com
-    - ntp7.aliyun.com
-    - time1.aliyun.com
-    - time2.aliyun.com
-    - time3.aliyun.com
-    - time4.aliyun.com
-    - time5.aliyun.com
-    - time6.aliyun.com
-    - time7.aliyun.com
-    - "*.time.edu.cn"
-    - time1.apple.com
-    - time2.apple.com
-    - time3.apple.com
-    - time4.apple.com
-    - time5.apple.com
-    - time6.apple.com
-    - time7.apple.com
-    - time1.google.com
-    - time2.google.com
-    - time3.google.com
-    - time4.google.com
-    - music.163.com
-    - "*.music.163.com"
-    - "*.126.net"
-    - musicapi.taihe.com
-    - music.taihe.com
-    - songsearch.kugou.com
-    - trackercdn.kugou.com
-    - "*.kuwo.cn"
-    - api-jooxtt.sanook.com
-    - api.joox.com
-    - joox.com
-    - y.qq.com
-    - "*.y.qq.com"
-    - streamoc.music.tc.qq.com
-    - mobileoc.music.tc.qq.com
-    - isure.stream.qqmusic.qq.com
-    - dl.stream.qqmusic.qq.com
-    - aqqmusic.tc.qq.com
-    - amobile.music.tc.qq.com
-    - "*.xiami.com"
-    - "*.music.migu.cn"
-    - music.migu.cn
-    - "*.msftconnecttest.com"
-    - "*.msftncsi.com"
-    - localhost.ptlogin2.qq.com
-    - "*.*.*.srv.nintendo.net"
-    - "*.*.stun.playstation.net"
-    - xbox.*.*.microsoft.com
-    - "*.ipv6.microsoft.com"
-    - "*.*.xboxlive.com"
-    - speedtest.cros.wr.pvp.net
-    - "*.steinx.*"
+  fake-ip-range: 198.18.0.1/16
+  
   nameserver:
-    - 1.0.0.1
-    - 114.114.114.114
-    - 208.67.222.222
-    - 119.29.29.29  
-    - tls://1.1.1.1:853
-    - tcp://1.1.1.1:53
-    - tcp://208.67.222.222:443
-    - tls://dns.google
+    - https://EU2.DNS.LAVATE.CH/dns-query
+    - https://DNS.HeN.ee/dns-query
+    - https://NoTMIKE.dev/dns.php
+    - tls://dns.google:853
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://dnsforge.de/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://DANDELIONSPROUT.Asuscomm.com:2501/dns-query
   fallback:
-    - 1.0.0.1
-    - 114.114.114.114
-    - 208.67.222.222
-    - 119.29.29.29  
-    - tls://1.1.1.1:853
-    - tcp://1.1.1.1:53
-    - tcp://208.67.222.222:443
-    - tls://dns.google
+    - https://EU2.DNS.LAVATE.CH/dns-query
+    - https://DNS.HeN.ee/dns-query
+    - https://NoTMIKE.dev/dns.php
+    - tls://dns.google:853
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://dnsforge.de/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://DANDELIONSPROUT.Asuscomm.com:2501/dns-query
+
   fallback-filter:
     geoip: true
     ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
-      - 127.0.0.1/32
-    domain:
-      - +.google.com
-      - +.facebook.com
-      - +.twitter.com
-      - +.youtube.com
-      - +.xn--ngstr-lra8j.com
-      - +.google.cn
-      - +.googleapis.cn
-      - +.googleapis.com
-      - +.gvt1.com
+      # - 240.0.0.0/4
+    # domain:
+    #   - '+.google.com'
+    #   - '+.facebook.com'
+    #   - '+.youtube.com'
+    
+  fake-ip-filter:
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+    - '+.srv.nintendo.net'
+    - '+.stun.playstation.net'
+    - '+.msftconnecttest.com'
+    - '+.msftncsi.com'
+    - '+.xboxlive.com'
+    - 'msftconnecttest.com'
+    - 'xbox.*.microsoft.com'
+    - '*.battlenet.com.cn'
+    - '*.battlenet.com'
+    - '*.blzstatic.cn'
+    - '*.battle.net'
+
 proxies:
 
 proxy-groups:
   - name: 🔥 grop
-    type: select
+    type: url-test
     url: 'http://www.google.com'
     interval: 200
     use:
@@ -140,7 +86,36 @@ proxy-providers:
       enable: true
       interval: 200
       url: 'http://www.google.com'
+      
+rule-providers:
+# name: # Provider 名称
+#   type: http # http 或 file
+#   behavior: classical # 或 ipcidr、domain
+#   path: # 文件路径
+#   url: # 只有当类型为 HTTP 时才可用，您不需要在本地空间中创建新文件。
+#   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
+
+  Unbreak:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Unbreak.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+    interval: 86400
 
 rules:
+  # Unbreak
+  - RULE-SET,Unbreak,DIRECT
+
+  # Local Area Network
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,fe80::/10,DIRECT
+
   - GEOIP,IR,DIRECT
+  - GEOIP,CN,🔥 grop
+
   - MATCH,🔥 grop
