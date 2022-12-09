@@ -102,7 +102,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
     interval: 200
 
-payload:
+RULE-SET:
   # Unbreak
   - RULE-SET,Unbreak,DIRECT
 rules:
