@@ -46,7 +46,7 @@ dns:
   fallback-filter:
     geoip: true
     ipcidr:
-      # - 240.0.0.0/4
+        - 240.0.0.0/4
     # domain:
     #   - '+.google.com'
     #   - '+.facebook.com'
@@ -99,8 +99,8 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/Unbreak.yaml
-    url: "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml"
-    interval: 86400
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+    interval: 200
 
 rules:
   # Unbreak
