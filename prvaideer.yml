@@ -87,7 +87,7 @@ proxy-providers:
       interval: 200
       url: 'http://www.google.com'
       
-#rule-providers:
+rule-providers:
 # name: # Provider 名称
 #   type: http # http 或 file
 #   behavior: classical # 或 ipcidr、domain
@@ -97,8 +97,8 @@ proxy-providers:
 
   Unbreak:
     type: http
-    behavior: classical
-    path: ./RuleSet/Unbreak.yaml
+    behavior: domain
+    path: RuleSet/Unbreak.yaml
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
     interval: 200
 
