@@ -21,24 +21,17 @@ dns:
   fake-ip-range: 198.18.0.1/16
   
   nameserver:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.adguard.com/dns-query
-    - https://dnsforge.de/dns-query
-    - https://dns.quad9.net/dns-query
-    - https://DANDELIONSPROUT.Asuscomm.com:2501/dns-query
+    - 9.9.9.9
+    - 1.0.0.1
+    - 8.8.8.8
   fallback:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.adguard.com/dns-query
-    - https://dnsforge.de/dns-query
-    - https://dns.quad9.net/dns-query
-    - https://DANDELIONSPROUT.Asuscomm.com:2501/dns-query
-
+    - 9.9.9.9
+    - 1.0.0.1
+    - 8.8.8.8
   fallback-filter:
     geoip: true
     ipcidr:
-        - 190.0.0.0/4
+        - 10.0.0.0/8
     # domain:
         - '+.google.com'
         - '+.facebook.com'
