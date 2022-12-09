@@ -56,9 +56,9 @@ proxies:
 
 proxy-groups:
   - name: 🔥 grop
-    type: select
+    type: url-test
     url: 'http://www.google.com'
-    interval: 200
+    interval: 300
     use:
       - others
 
@@ -69,10 +69,10 @@ proxy-providers:
     path: sspool.herokuapp.com/provider-others.yaml
     health-check:
       enable: true
-      interval: 200
-      url: 'http://www.google.com'
+      interval: 300
+      url: 'https://www.google.com'
       
-rule-providers:
+rules-providers:
 # name: # Provider 名称
 #   type: http # http 或 file
 #   behavior: classical # 或 ipcidr、domain
@@ -84,8 +84,9 @@ rule-providers:
     type: http
     behavior: domain
     path: RuleSet/Unbreak.yaml
-    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/Google%2C%20DIRECT.yaml"
+    url: https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/Google%2C%20DIRECT.yaml
     interval: 8700
+
 rules:
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
