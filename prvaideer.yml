@@ -85,4 +85,6 @@ rules:
   #- SCRIPT,quic,DIRECT
   #- RULE-SET,Unbreak,DIRECT,no-resolve
   # Local Area Network
+  - DOMAIN-SUFFIX,googleapis.cn,DIRECT
+  - DOMAIN-SUFFIX,google.com,DIRECT
   - MATCH,,🔥 grop
