@@ -16,6 +16,7 @@ proxy-groups:
       - others
       - V2cross
       - V2cross2
+      - All
 
 proxy-providers:
   others:
@@ -45,20 +46,14 @@ proxy-providers:
       interval: 300
       url: 'https://www.google.com'
       
-rules-providers:
-# name: # Provider 名称
-#   type: http # http 或 file
-#   behavior: classical # 或 ipcidr、domain
-#   path: # 文件路径
-#   url: # 只有当类型为 HTTP 时才可用，您不需要在本地空间中创建新文件。
-#   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
-
-  Unbreak:
+  All:
     type: http
-    behavior: domain
-    path: RuleSet/Unbreak.yaml
-    url: https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/Google%2C%20DIRECT.yaml
-    interval: 8700
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/Proxy%20Auto.txt"
+    path: sspool.herokuapp.com/provider-others.yaml
+    health-check:
+      enable: true
+      interval: 300
+      url: 'https://www.google.com'
 
 profile:
     tracing: true
