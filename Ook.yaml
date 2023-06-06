@@ -40,7 +40,7 @@ proxy-groups:
 
   - name: FASTSSH
 
-    type: url-test
+    type: select
 
     url: 'http://www.gstatic.com/generate_204'
 
@@ -50,7 +50,14 @@ proxy-groups:
 
       - ALL
 
-      
+      - AzadNet
+
+      - vpnproxy66
+
+      - config1
+
+      - AzadNetCH
+
 
   - name: ALL
 
