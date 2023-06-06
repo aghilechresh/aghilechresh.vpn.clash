@@ -6,7 +6,7 @@ allow-lan: true
 
 ipv6: true
 
-mode: Rule
+mode: Global
 
 log-level: info
 
