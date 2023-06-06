@@ -1,9 +1,4 @@
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
-log-level: info
-external-controller: 127.0.0.1:9090
+
 proxies:
   - {name: v2cross.com, server: 104.27.52.215, port: 2083, type: vmess, uuid: e883ff76-3bb4-4008-c068-6b5b1d960ea7, alterId: 0, cipher: auto, tls: true, servername: uyaa.vtcss.top, network: ws, ws-opts: {path: /qwer02, headers: {Host: uyaa.vtcss.top}}}
   - {name: v2cross.com 2, server: 172.99.188.99, port: 3306, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
@@ -290,34 +285,7 @@ rules:
  - IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve
  - IP-CIDR,100.64.0.0/10,🎯 全球直连,no-resolve
  - IP-CIDR6,::1/128,🎯 全球直连,no-resolve
- - IP-CIDR6,fc00::/7,🎯 全球直连,no-resolve
- - IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
- - IP-CIDR6,fd00::/8,🎯 全球直连,no-resolve
- - PROCESS-NAME,v2ray,🎯 全球直连,DIRECT
- - PROCESS-NAME,ss-local,🎯 全球直连,DIRECT
- - PROCESS-NAME,aria2c,🎯 全球直连,DIRECT
- - PROCESS-NAME,fdm,🎯 全球直连,DIRECT
- - PROCESS-NAME,Folx,🎯 全球直连,DIRECT
- - PROCESS-NAME,NetTransport,🎯 全球直连,DIRECT
- - PROCESS-NAME,Thunder,🎯 全球直连,DIRECT
- - PROCESS-NAME,Transmission,🎯 全球直连,DIRECT
- - PROCESS-NAME,uTorrent,🎯 全球直连,DIRECT
- - PROCESS-NAME,WebTorrent,🎯 全球直连,DIRECT
- - PROCESS-NAME,WebTorrent Helper,🎯 全球直连,DIRECT
- - DOMAIN-KEYWORD,1drv,Ⓜ️ 微软服务
- - DOMAIN-KEYWORD,microsoft,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,aadrm.com,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,acompli.com,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,acompli.net,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,aka.ms,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,akadns.net,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,aspnetcdn.com,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,assets-yammer.com,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,azure.com,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,azure.net,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,azureedge.net,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,azurerms.com,Ⓜ️ 微软服务
- - DOMAIN-SUFFIX,bing.com,Ⓜ️ 微软服务
+
  - DOMAIN-SUFFIX,cloudapp.net,Ⓜ️ 微软服务
  - DOMAIN-SUFFIX,cloudappsecurity.com,Ⓜ️ 微软服务
  - DOMAIN-SUFFIX,edgesuite.net,Ⓜ️ 微软服务
