@@ -25,7 +25,7 @@ proxy-groups:
     interval: 150
     proxies:
       - ALL
-      - AzadNet
+      - v2.txt
       - vpnproxy66
       - config1
       - AzadNetCH
@@ -33,7 +33,7 @@ proxy-groups:
   - name: ALL
     type: url-test
     use:
-      - AzadNet
+      - v2.txt
       - vpnproxy66
       - config1
       - AzadNetCH
@@ -43,7 +43,7 @@ proxy-groups:
   - name: AzadNet
     type: url-test
     use:
-      - AzadNet
+      - v2.txt
     url: 'http://www.gstatic.com/generate_204'
     interval: 150
     
@@ -69,9 +69,9 @@ proxy-groups:
     interval: 150    
 
 proxy-providers:
-  AzadNet:
+  v2.txt:
     type: http
-    url: "https://api.dler.io/sub?target=clash&url=https://9527521.xyz/config/5cWf6HzYRaymt1i7&insert=false&config=https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/customized/ark.ini"
+    url: "https://raw.githubusercontent.com/aghilechresh/aghilechresh.vpn.clash/main/v2.txt"
     path: sspool.herokuapp.com/provider.yaml
     health-check:
       enable: true
