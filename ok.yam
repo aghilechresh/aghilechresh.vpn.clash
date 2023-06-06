@@ -40,7 +40,7 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 150
     
-  - name: AzadNet
+  - name: v2.txt
     type: url-test
     use:
       - v2.txt
