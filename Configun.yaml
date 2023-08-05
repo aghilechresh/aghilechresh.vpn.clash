@@ -12,7 +12,7 @@ dns:
     nameserver:
       - 127.0.0.1:8053
       
-      proxy-sources:
+    proxy-sources:
   - type: url
     url: "https://raw.githubusercontent.com/Kr328/clash-config-preprocessor/master/example/proxies.yml"
   - type: plain
