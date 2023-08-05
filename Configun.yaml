@@ -309,7 +309,7 @@ proxy-groups:
 
   - name: ⛔Direct
     type: select
-    proxies:
+proxies:
       - DIRECT
 rule-sets:
   - name: lhie # 名称
