@@ -306,10 +306,7 @@ proxy-groups:
       - "Speedy Quark Turkey 🇹🇷 Istanbul 6"
       - UKR 🇺🇦 Kharkiv
       - UKR 🇺🇦 Kyiv
-proxies:
-  - name: ⛔Direct
-    type: select
-      - DIRECT
+      
 rule-sets:
   - name: lhie # 名称
     type: url  # 类新 目前仅支持 url
