@@ -311,8 +311,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      
-      rule-sets:
+rule-sets:
   - name: lhie # 名称
     type: url  # 类新 目前仅支持 url
     url: 'https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Rule.yml'
