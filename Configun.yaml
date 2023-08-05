@@ -10,20 +10,7 @@ dns:
     listen: 0.0.0.0:1053
     enhanced-mode: redir-host
     nameserver:
-      - 127.0.0.1:8053
-      
-    proxy-sources:
-  - type: url
-    url: "https://raw.githubusercontent.com/Kr328/clash-config-preprocessor/master/example/proxies.yml"
-  - type: plain
-    data:
-      name: "ss1"
-      type: ss
-      server: server
-      port: 443
-      cipher: AEAD_CHACHA20_POLY1305
-      password: "password"
-      
+      - 8.8.8.8
 proxies:
   - {name: FRA 🇫🇷 Gravelines, server: 95.85.90.181, port: 803, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
   - {name: FRA 🇫🇷 Paris, server: 135.125.248.215, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
