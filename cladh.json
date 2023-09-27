@@ -8,7 +8,7 @@ external-controller: 0.0.0.0:9090
 dns:
   enable: true
   listen: 0.0.0.0:53
-  ipv6: false
+  ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   
@@ -191,5 +191,13 @@ proxy-groups:
       - 'رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣1️⃣ | 4️⃣8️⃣'
       - 'رایگان | SS | @bright_vpn | FR🇫🇷 | 0️⃣2️⃣ | 4️⃣9️⃣'
 rules:
+ - IP-CIDR,192.168.0.0/16,DIRECT 
+ - IP-CIDR,10.0.0.0/8,DIRECT
+ - IP-CIDR,172.16.0.0/12,DIRECT
+ - IP-CIDR,127.0.0.0/8,DIRECT
+ - IP-CIDR,100.64.0.0/10,DIRECT
+ - IP-CIDR,224.0.0.0/4,DIRECT
+ - IP-CIDR,fe80::/10,DIRECT
+ - DOMAIN-KEYWORD,GitHub,DIRECT
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
