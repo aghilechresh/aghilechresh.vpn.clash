@@ -68,8 +68,8 @@
   },
   "inbounds": [
     {
-      "type": "proxy",
-      "tag": "Internet",
+      "type": "ssh",
+      "tag": "sacks",
       "listen": "::",
       "listen_port": 9898,
       "sniff": true,
@@ -129,7 +129,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
-    "final": "Internet",
+    "final": "sacks",
     "geoip": {
       "download_url": "https://github.com/malikshi/sing-box-geo/releases/latest/download/geoip.db",
       "download_detour": "Best Latency"
