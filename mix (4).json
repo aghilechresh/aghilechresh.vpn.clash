@@ -68,7 +68,7 @@
   },
   "inbounds": [
     {
-      "type": "tproxy",
+      "type": "proxy",
       "tag": "Internet",
       "listen": "::",
       "listen_port": 9898,
